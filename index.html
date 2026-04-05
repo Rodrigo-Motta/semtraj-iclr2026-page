@@ -3,139 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Primary Meta -->
-  <meta name="title" content="Characterizing Human Semantic Navigation as Trajectories in Embedding Space">
-  <meta name="description" content="We propose a geometric framework that treats human semantic retrieval as continuous trajectories in embedding space, introducing physics-inspired metrics that distinguish neurodegenerative patients, discriminate semantic categories, and generalize across languages and models.">
+  <meta name="title" content="Characterizing Human Semantic Navigation in Concept Production as Trajectories in Embedding Space">
+  <meta name="description" content="A geometric framework treating human semantic retrieval as continuous trajectories in embedding space, introducing physics-inspired metrics — ICLR 2026.">
   <meta name="keywords" content="semantic navigation, embedding space, trajectories, verbal fluency, neurodegenerative, NLP, ICLR 2026">
-  <meta name="author" content="Felipe D. Toro-Hernández, Jesuino Vieira Filho, Rodrigo M. Cabral-Carvalho">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Characterizing Human Semantic Navigation as Trajectories in Embedding Space">
-  <meta property="og:description" content="A geometric framework treating human semantic retrieval as continuous trajectories in embedding space — ICLR 2026.">
-
-  <!-- Academic -->
-  <meta name="citation_title" content="Characterizing Human Semantic Navigation as Trajectories in Embedding Space">
-  <meta name="citation_author" content="Toro-Hernández, Felipe D.">
+  <meta name="citation_title" content="Characterizing Human Semantic Navigation in Concept Production as Trajectories in Embedding Space">
+  <meta name="citation_author" content="Toro-Hernández, Felipe Diego">
   <meta name="citation_author" content="Vieira Filho, Jesuino">
   <meta name="citation_author" content="Cabral-Carvalho, Rodrigo M.">
   <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="International Conference on Learning Representations (ICLR)">
-
+  <meta name="citation_conference_title" content="The Fourteenth International Conference on Learning Representations">
   <title>Semantic Trajectories — ICLR 2026</title>
 
-  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/index.css">
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- JS -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <noscript><link rel="stylesheet" href="static/css/fontawesome.all.min.css"></noscript>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "Characterizing Human Semantic Navigation as Trajectories in Embedding Space",
-    "author": [
-      {"@type": "Person", "name": "Felipe D. Toro-Hernández", "affiliation": {"@type": "Organization", "name": "Federal University of ABC"}},
-      {"@type": "Person", "name": "Jesuino Vieira Filho", "affiliation": {"@type": "Organization", "name": "Université de Montréal"}},
-      {"@type": "Person", "name": "Rodrigo M. Cabral-Carvalho", "affiliation": {"@type": "Organization", "name": "Federal University of ABC"}}
-    ],
-    "datePublished": "2026",
-    "publisher": {"@type": "Organization", "name": "ICLR"},
-    "keywords": ["semantic navigation", "embedding space", "trajectories", "verbal fluency", "neurodegenerative"]
-  }
-  </script>
 </head>
-<body>
+<body class="light">
 
-<!-- Scroll-to-top -->
-<button class="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll to top">
-  <i class="fas fa-chevron-up"></i>
-</button>
+<!-- Theme toggle + scroll-to-top -->
 
-<main id="main-content">
+<button class="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
 
 <!-- ════════════════════════════════════════════
-     HERO — Dark, with floating particle canvas
+     HERO
      ════════════════════════════════════════════ -->
-<section class="hero hero-dark">
+<section class="hero-section grid-bg">
   <canvas id="hero-canvas"></canvas>
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <div class="venue-badge">ICLR 2026</div>
-          <h1 class="title is-1 publication-title">
-            Characterizing Human <span class="hl-blue">Semantic Navigation</span>
-            as <span class="hl-gold">Trajectories</span> in Embedding Space
-          </h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/felipe-toro-hern%C3%A1ndez-39b86b209/" target="_blank">Felipe D. Toro-Hernández</a><sup>1*</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/jesuinovieira/" target="_blank">Jesuino Vieira Filho</a><sup>2*</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/rodrigo-m-cabral-carvalho-7422ba181/" target="_blank">Rodrigo M. Cabral-Carvalho</a><sup>1*</sup>
-            </span>
-          </div>
-          <div class="is-size-6 publication-authors" style="margin-top: -0.5rem;">
-            <span style="color: #94a3b8;">
-              <sup>1</sup> Center of Mathematics, Computing &amp; Cognition · Federal University of ABC<br>
-              <sup>2</sup> Dept. of Computer Science &amp; Operations Research · Université de Montréal
-            </span>
-            <span class="eql-cntrb"><br><small><sup>*</sup>Equal Contribution</small></span>
-          </div>
+  <div class="hero-content">
+    <img src="static/images/logo-iclr.png" alt="ICLR" style="height: 60px; margin-bottom: 16px; border-radius: 8px;">
+    <div class="venue-badge">ICLR 2026</div>
+    <h1>
+      Characterizing Human <span class="blue">Semantic Navigation</span>
+      in Concept Production as <span class="gold">Trajectories</span> in Embedding Space
+    </h1>
+    <p class="authors-line">
+      <a href="https://www.linkedin.com/in/felipe-toro-hern%C3%A1ndez-39b86b209/" target="_blank">Felipe D. Toro-Hernández</a><sup>1</sup> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/jesuinovieira/" target="_blank">Jesuino Vieira Filho</a><sup>2</sup> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/rodrigo-m-cabral-carvalho-7422ba181/" target="_blank">Rodrigo M. Cabral-Carvalho</a><sup>1</sup>
+    </p>
+    <p class="equal-line">All authors contributed equally</p>
+    <div style="display:flex; align-items:center; justify-content:center; gap:1.5rem; margin-top:1.2rem; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:0.6rem;">
+        <img src="static/images/logo-ufabc.png" alt="UFABC" style="height:36px;">
+        <span class="dim" style="font-size:0.85rem; text-align:left; line-height:1.3;"><sup class="gold">1</sup> Federal University of ABC<br><span style="opacity:0.6; font-size:0.78rem;">Center of Mathematics, Computing &amp; Cognition</span></span>
+      </div>
+      <div style="display:flex; align-items:center; gap:0.6rem;">
+        <img src="static/images/logo-udem.png" alt="UdeM" style="height:36px;">
+        <span class="dim" style="font-size:0.85rem; text-align:left; line-height:1.3;"><sup class="gold">2</sup> Université de Montréal<br><span style="opacity:0.6; font-size:0.78rem;">Dept. of CS &amp; Operations Research</span></span>
+      </div>
+    </div>
+    <div class="link-buttons">
+      <a href="https://arxiv.org/pdf/2602.05971" target="_blank" class="link-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+      <a href="https://github.com/jesuinovieira/semtraj-iclr2026" target="_blank" class="link-btn"><i class="fab fa-github"></i> Code</a>
+      <a href="https://openreview.net/forum?id=QQVmIR97sf" target="_blank" class="link-btn"><i class="fas fa-book-open"></i> OpenReview</a>
+    </div>
+  </div>
+</section>
 
-          <div class="column has-text-centered" style="margin-top: 1.5rem;">
-            <div class="publication-links">
 
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2602.05971" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://github.com/jesuinovieira/semtraj-iclr2026" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Code</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://openreview.net/forum?id=QQVmIR97sf" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-book-open"></i></span>
-                  <span>OpenReview</span>
-                </a>
-              </span>
-            </div>
-          </div>
+<!-- ════════════════════════════════════════════
+     THE PROBLEM
+     ════════════════════════════════════════════ -->
+<section class="section-block grid-bg">
+  <div class="container-main fade-section">
+    <span class="tag-badge">The Problem</span>
+    <h2 style="margin-bottom: 1.5rem;">
+      Human <span class="blue">semantic navigation</span>: moving through concepts
+    </h2>
+    <div class="row">
+      <div class="col-7">
+        <div class="diagram">
+          <img src="static/images/slide2-clusters.svg" alt="Clustering and switching between semantic categories">
+        </div>
+      </div>
+      <div class="col-5">
+        <p style="margin-bottom: 20px;">
+          Navigation through semantic representations is often characterized in terms of <em>clustering</em> and <em>switching</em>.
+        </p>
+        <p class="dim" style="margin-bottom: 20px;">
+          This misses the <span class="blue">step-by-step granularity</span> — the continuous geometry of how meaning unfolds over time.
+        </p>
+        <p class="dim" style="margin-bottom: 20px;">
+          Existing NLP pipelines are labor-intensive, heterogeneous, and hard to compare across studies.
+        </p>
+        <div class="callout">
+          <p>→ What if we framed semantic retrieval as a <strong>trajectory through geometric space</strong>?</p>
         </div>
       </div>
     </div>
@@ -144,84 +101,40 @@
 
 
 <!-- ════════════════════════════════════════════
-     ANIMATED TEASER — Trajectory Diagram
+     CUMULATIVE EMBEDDINGS
      ════════════════════════════════════════════ -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body fade-section">
-      <div class="diagram-container anim-trigger">
-        <svg viewBox="0 0 900 320" preserveAspectRatio="xMidYMid meet">
-          <!-- Cluster A -->
-          <circle cx="200" cy="160" r="110" fill="none" stroke="rgba(37,99,235,0.15)" stroke-width="1.5" stroke-dasharray="6 5"/>
-          <text x="200" y="50" fill="#2563eb" font-size="16" text-anchor="middle" font-weight="600" opacity="0.7">Animals</text>
-          <circle cx="165" cy="135" r="7" fill="#2563eb" opacity="0.7"/>
-          <circle cx="220" cy="125" r="7" fill="#2563eb" opacity="0.7"/>
-          <circle cx="175" cy="185" r="7" fill="#2563eb" opacity="0.7"/>
-          <circle cx="230" cy="180" r="7" fill="#2563eb" opacity="0.7"/>
-          <text x="165" y="130" fill="#1e293b" font-size="13" dx="12" font-weight="500">cat</text>
-          <text x="220" y="118" fill="#1e293b" font-size="13" dx="12" font-weight="500">dog</text>
-          <text x="175" y="208" fill="#1e293b" font-size="13" text-anchor="middle" font-weight="500">hamster</text>
-          <text x="230" y="200" fill="#1e293b" font-size="13" dx="12" font-weight="500">rabbit</text>
-
-          <!-- Arrow -->
-          <line x1="315" y1="165" x2="405" y2="165" stroke="#d4a017" stroke-width="2" stroke-dasharray="8 5" opacity="0.5"/>
-          <polygon points="405,160 415,165 405,170" fill="#d4a017" opacity="0.5"/>
-          <text x="360" y="150" fill="#d4a017" font-size="14" text-anchor="middle" font-weight="600">embed</text>
-
-          <!-- Trajectory space -->
-          <rect x="440" y="30" width="430" height="270" rx="16" fill="rgba(241,245,249,0.5)" stroke="rgba(37,99,235,0.1)" stroke-width="1"/>
-          <text x="655" y="55" fill="#64748b" font-size="13" text-anchor="middle" font-weight="500">Embedding Space</text>
-
-          <!-- Cumulative trajectory -->
-          <path class="traj-line" d="M 490,250 C 530,220 560,190 600,170 S 680,110 740,100 S 810,80 840,75"
-                fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
-          <path d="M 490,250 C 530,220 560,190 600,170 S 680,110 740,100 S 810,80 840,75"
-                fill="none" stroke="rgba(37,99,235,0.08)" stroke-width="14" stroke-linecap="round"/>
-
-          <circle cx="490" cy="250" r="7" fill="#2563eb" opacity="0.8"/>
-          <circle cx="600" cy="170" r="7" fill="#2563eb" opacity="0.8"/>
-          <circle cx="740" cy="100" r="7" fill="#2563eb" opacity="0.8"/>
-          <circle cx="840" cy="75" r="7" fill="#2563eb" class="dot-pulse"/>
-
-          <text x="490" y="275" fill="#2563eb" font-size="12" text-anchor="middle" font-weight="500">"cat"</text>
-          <text x="600" y="157" fill="#2563eb" font-size="12" text-anchor="middle" font-weight="500">"cat dog"</text>
-          <text x="740" y="88" fill="#2563eb" font-size="12" text-anchor="middle" font-weight="500">"cat dog hamster"</text>
-          <text x="840" y="62" fill="#2563eb" font-size="12" text-anchor="middle" font-weight="500">"cat dog hamster rabbit"</text>
-
-          <!-- Velocity arrow -->
-          <line x1="605" y1="168" x2="730" y2="105" stroke="#d4a017" stroke-width="2" opacity="0.5"/>
-          <polygon points="728,100 735,108 724,108" fill="#d4a017" opacity="0.5"/>
-          <text x="680" y="125" fill="#d4a017" font-size="13" font-weight="600" opacity="0.6">v₂</text>
-        </svg>
+<section class="section-block grid-bg">
+  <div class="container-main fade-section">
+    <span class="tag-badge">Key Idea</span>
+    <h2 style="margin-bottom: 1.5rem;">
+      <span class="gold">Cumulative</span> embeddings capture search history
+    </h2>
+    <div class="row">
+      <div class="col-7">
+        <div class="diagram">
+          <img src="static/images/slide3-cumulative.svg" alt="Cumulative embeddings capture search history">
+        </div>
       </div>
-      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
-        We frame human semantic retrieval as <strong style="color: var(--blue);">continuous trajectories</strong> in embedding space.
-        Each point encodes the <strong style="color: var(--gold);">cumulative history</strong> of all words produced so far,
-        enabling physics-inspired metrics that capture navigation dynamics beyond binary clustering.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════════
-     ABSTRACT
-     ════════════════════════════════════════════ -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths fade-section">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Human semantic navigation — how people retrieve and organize concepts from memory — is typically analyzed through <em>clustering</em> and <em>switching</em> in verbal fluency tasks. These binary characterizations miss the <strong>continuous, step-by-step geometry</strong> of how meaning unfolds over time.
+      <div class="col-5">
+        <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+          Each word <span class="blue">x<sub>t</sub></span> encodes the <span class="gold">full prefix</span> up to step <em>t</em>.
+        </p>
+        <div class="metric-card blue-b" style="margin-bottom: 1.2rem;">
+          <p style="color: var(--text); font-size: 1.05rem;">
+            Step 1: embed <span class="mono blue">"cat"</span><br>
+            Step 2: embed <span class="mono blue">"cat dog"</span><br>
+            Step 3: embed <span class="mono blue">"cat dog shark"</span><br>
+            &nbsp;&nbsp;⋮
           </p>
-          <p>
-            We propose a geometric framework that treats semantic retrieval as <strong>trajectories through embedding space</strong>. By cumulatively encoding each participant's word sequence, we compute five physics-inspired metrics — <em>distance to next</em>, <em>velocity</em>, <em>acceleration</em>, <em>entropy</em>, and <em>distance to centroid</em> — that capture the fine-grained dynamics of semantic search.
-          </p>
-          <p>
-            Across four datasets spanning four languages (Spanish, English, Italian, German), two task types, and three embedding models, our framework <strong>(i)</strong> distinguishes neurodegenerative patients from healthy controls via kinematic signatures of executive dysfunction, <strong>(ii)</strong> discriminates semantic categories and reveals language-specific organization, and <strong>(iii)</strong> produces convergent results across embedding architectures for local dynamics. Cumulative encoding excels for long trajectories while non-cumulative representations are better suited for short sequences — offering a practical guideline for researchers.
-          </p>
+        </div>
+        <p class="dim" style="margin-bottom: 1rem;">
+          This captures <span class="blue">dependencies</span> between successive items — semantic retrieval is inherently cumulative.
+        </p>
+        <p class="dim">
+          Working memory and inhibitory control shape each response based on all previous ones.
+        </p>
+        <div class="callout">
+          <p style="color: var(--text);">Result: a <span class="blue">unique trajectory</span> per participant × concept pair</p>
         </div>
       </div>
     </div>
@@ -230,189 +143,40 @@
 
 
 <!-- ════════════════════════════════════════════
-     KEY IDEA — Cumulative Embeddings
+     FIVE METRICS
      ════════════════════════════════════════════ -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full fade-section">
-        <h2 class="title is-3 has-text-centered">Key Idea: Cumulative Embeddings</h2>
-        <div class="columns is-vcentered" style="margin-top: 2rem;">
-          <div class="column is-7">
-            <div class="diagram-container anim-trigger">
-              <svg viewBox="0 0 500 360" preserveAspectRatio="xMidYMid meet">
-                <!-- Axes -->
-                <line x1="50" y1="320" x2="470" y2="320" stroke="rgba(37,99,235,0.15)" stroke-width="1.5"/>
-                <line x1="50" y1="320" x2="50" y2="20" stroke="rgba(37,99,235,0.15)" stroke-width="1.5"/>
-                <text x="470" y="345" fill="#94a3b8" font-size="12" text-anchor="end" font-style="italic">dim 1</text>
-                <text x="35" y="25" fill="#94a3b8" font-size="12" text-anchor="end" font-style="italic">dim 2</text>
-
-                <!-- Non-cumulative dots (dim) -->
-                <g opacity="0.2">
-                  <circle cx="120" cy="260" r="6" fill="#dc2626"/>
-                  <circle cx="200" cy="200" r="6" fill="#dc2626"/>
-                  <circle cx="330" cy="100" r="6" fill="#dc2626"/>
-                  <circle cx="300" cy="280" r="6" fill="#dc2626"/>
-                  <text x="120" y="284" fill="#dc2626" font-size="11" text-anchor="middle">cat</text>
-                  <text x="200" y="224" fill="#dc2626" font-size="11" text-anchor="middle">dog</text>
-                  <text x="330" y="124" fill="#dc2626" font-size="11" text-anchor="middle">shark</text>
-                  <text x="300" y="304" fill="#dc2626" font-size="11" text-anchor="middle">lion</text>
-                </g>
-                <rect x="310" y="325" width="165" height="24" rx="12" fill="rgba(220,38,38,0.08)" stroke="rgba(220,38,38,0.2)" stroke-width="1"/>
-                <text x="392" y="342" fill="#dc2626" font-size="10" text-anchor="middle" font-weight="500">non-cumulative: isolated</text>
-
-                <!-- Cumulative trajectory glow -->
-                <path d="M 100,290 C 150,260 180,220 220,190 S 300,140 340,130 S 400,95 450,80"
-                      fill="none" stroke="rgba(37,99,235,0.06)" stroke-width="14" stroke-linecap="round"/>
-                <!-- Trajectory -->
-                <path class="traj-line" d="M 100,290 C 150,260 180,220 220,190 S 300,140 340,130 S 400,95 450,80"
-                      fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Points -->
-                <circle cx="100" cy="290" r="7" fill="#2563eb" opacity="0.8"/>
-                <circle cx="220" cy="190" r="7" fill="#2563eb" opacity="0.8"/>
-                <circle cx="340" cy="130" r="7" fill="#2563eb" opacity="0.8"/>
-                <circle cx="450" cy="80" r="7" fill="#2563eb" class="dot-pulse"/>
-                <!-- Labels -->
-                <text x="100" y="312" fill="#2563eb" font-size="12" text-anchor="middle" font-weight="500">"cat"</text>
-                <text x="220" y="178" fill="#2563eb" font-size="12" text-anchor="middle" font-weight="500">"cat dog"</text>
-                <text x="340" y="118" fill="#2563eb" font-size="12" text-anchor="middle" font-weight="500">"cat dog shark"</text>
-                <text x="440" y="68" fill="#2563eb" font-size="12" text-anchor="middle" font-weight="500">"…shark lion"</text>
-                <!-- Accumulation labels -->
-                <text x="165" y="248" fill="#d4a017" font-size="10" text-anchor="middle" font-weight="500">+dog</text>
-                <text x="280" y="165" fill="#d4a017" font-size="10" text-anchor="middle" font-weight="500">+shark</text>
-                <text x="400" y="110" fill="#d4a017" font-size="10" text-anchor="middle" font-weight="500">+lion</text>
-                <!-- Badge -->
-                <rect x="55" y="35" width="180" height="24" rx="12" fill="rgba(37,99,235,0.08)" stroke="rgba(37,99,235,0.2)" stroke-width="1"/>
-                <text x="145" y="52" fill="#2563eb" font-size="11" text-anchor="middle" font-weight="600">cumulative: trajectory</text>
-              </svg>
-            </div>
-          </div>
-          <div class="column is-5">
-            <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">
-              Each word <strong class="hl-blue">x<sub>t</sub></strong> encodes the <strong class="hl-gold">full prefix</strong> up to step <em>t</em>.
-            </p>
-            <div class="metric-card blue-accent" style="margin-bottom: 1rem;">
-              <p style="font-family: 'SF Mono', monospace; font-size: 0.95rem; color: var(--text-primary);">
-                Step 1: embed <span class="hl-blue">"cat"</span><br>
-                Step 2: embed <span class="hl-blue">"cat dog"</span><br>
-                Step 3: embed <span class="hl-blue">"cat dog shark"</span><br>
-                &nbsp;&nbsp;⋮
-              </p>
-            </div>
-            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-              This captures <strong class="hl-blue">dependencies</strong> between successive items — semantic retrieval is inherently cumulative.
-            </p>
-            <div class="callout-box">
-              <p>Result: a <strong class="hl-blue">unique trajectory</strong> per participant × concept pair, encoding how meaning unfolds over time.</p>
-            </div>
-          </div>
+<section class="section-block grid-bg">
+  <div class="container-main fade-section">
+    <span class="tag-badge">Methods</span>
+    <h2 style="margin-bottom: 1.5rem;">
+      Five <span class="gold">physics-inspired</span> trajectory metrics
+    </h2>
+    <div class="row">
+      <div class="col-7">
+        <div class="diagram">
+          <img src="static/images/slide5-metrics.svg" alt="Five physics-inspired trajectory metrics">
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════════
-     METHODS — Five Metrics (animated)
-     ════════════════════════════════════════════ -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full fade-section">
-        <h2 class="title is-3 has-text-centered">Five Physics-Inspired Trajectory Metrics</h2>
-
-        <div class="columns" style="margin-top: 2rem;">
-          <div class="column is-7">
-            <div class="diagram-container anim-trigger">
-              <svg viewBox="0 0 520 430" preserveAspectRatio="xMidYMid meet">
-                <!-- Axes -->
-                <line x1="40" y1="390" x2="490" y2="390" stroke="rgba(37,99,235,0.12)" stroke-width="1.5"/>
-                <line x1="40" y1="390" x2="40" y2="20" stroke="rgba(37,99,235,0.12)" stroke-width="1.5"/>
-
-                <!-- Glow -->
-                <path d="M 70,350 L 140,290 L 220,300 L 270,200 L 350,180 L 390,90 L 460,120"
-                      fill="none" stroke="rgba(37,99,235,0.06)" stroke-width="14" stroke-linecap="round"/>
-                <!-- Trajectory -->
-                <path class="traj-line" d="M 70,350 L 140,290 L 220,300 L 270,200 L 350,180 L 390,90 L 460,120"
-                      fill="none" stroke="rgba(37,99,235,0.4)" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Points -->
-                <circle cx="70"  cy="350" r="6" fill="#2563eb"/>
-                <circle cx="140" cy="290" r="6" fill="#2563eb"/>
-                <circle cx="220" cy="300" r="6" fill="#2563eb"/>
-                <circle cx="270" cy="200" r="6" fill="#2563eb"/>
-                <circle cx="350" cy="180" r="6" fill="#2563eb"/>
-                <circle cx="390" cy="90"  r="6" fill="#2563eb"/>
-                <circle cx="460" cy="120" r="6" fill="#2563eb"/>
-                <!-- Labels -->
-                <text x="65" y="375" fill="#1e293b" font-size="13" text-anchor="middle" font-weight="500">x₁</text>
-                <text x="135" y="315" fill="#1e293b" font-size="13" text-anchor="middle" font-weight="500">x₂</text>
-                <text x="215" y="325" fill="#1e293b" font-size="13" text-anchor="middle" font-weight="500">x₃</text>
-                <text x="265" y="225" fill="#1e293b" font-size="13" text-anchor="middle" font-weight="500">x₄</text>
-                <text x="345" y="205" fill="#1e293b" font-size="13" text-anchor="middle" font-weight="500">x₅</text>
-                <text x="385" y="78" fill="#1e293b" font-size="13" text-anchor="middle" font-weight="500">x₆</text>
-                <text x="465" y="145" fill="#1e293b" font-size="13" text-anchor="middle" font-weight="500">x₇</text>
-
-                <!-- ① Distance bracket -->
-                <line x1="350" y1="180" x2="390" y2="90" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
-                <text x="388" y="145" fill="#dc2626" font-size="14" font-weight="600">d(x₅,x₆)</text>
-
-                <!-- ② Velocity arrow -->
-                <defs>
-                  <marker id="arrowG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                    <path d="M 0 0 L 10 3.5 L 0 7 Z" fill="#d4a017"/>
-                  </marker>
-                </defs>
-                <line x1="220" y1="300" x2="265" y2="206" stroke="#d4a017" stroke-width="2.5" marker-end="url(#arrowG)"/>
-                <text x="215" y="250" fill="#d4a017" font-size="15" font-weight="700">v₃</text>
-
-                <!-- ③ Acceleration arc -->
-                <path d="M 250,260 Q 285,210 330,220" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 3"/>
-                <text x="302" y="250" fill="#16a34a" font-size="14" font-weight="700">a₃</text>
-
-                <!-- ④ Entropy bar -->
-                <rect x="80" y="396" width="22" height="11" rx="3" fill="rgba(37,99,235,0.4)"/>
-                <rect x="106" y="396" width="22" height="11" rx="3" fill="rgba(37,99,235,0.12)"/>
-                <rect x="132" y="396" width="22" height="11" rx="3" fill="rgba(37,99,235,0.4)"/>
-                <rect x="158" y="396" width="22" height="11" rx="3" fill="rgba(37,99,235,0.4)"/>
-                <rect x="184" y="396" width="22" height="11" rx="3" fill="rgba(37,99,235,0.12)"/>
-                <text x="80" y="392" fill="#2563eb" font-size="11" font-weight="600">Entropy (median-split)</text>
-
-                <!-- ⑤ Centroid mini diagram -->
-                <rect x="350" y="260" width="155" height="125" rx="10" fill="rgba(147,51,234,0.04)" stroke="rgba(147,51,234,0.12)" stroke-width="1"/>
-                <text x="428" y="280" fill="#9333ea" font-size="11" font-weight="700" text-anchor="middle">⑤ Centroid</text>
-                <circle cx="390" cy="330" r="4" fill="#9333ea" opacity="0.4"/>
-                <circle cx="420" cy="310" r="4" fill="#9333ea" opacity="0.4"/>
-                <circle cx="440" cy="340" r="4" fill="#9333ea" opacity="0.4"/>
-                <circle cx="460" cy="315" r="4" fill="#9333ea" opacity="0.4"/>
-                <circle cx="428" cy="330" r="8" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4 3"/>
-                <circle cx="428" cy="330" r="2.5" fill="#9333ea"/>
-                <text x="428" y="370" fill="#9333ea" font-size="10" text-anchor="middle" font-weight="500">centroid</text>
-              </svg>
-            </div>
-          </div>
-          <div class="column is-5 stagger-container">
-            <div class="metric-card red-accent stagger-card" style="margin-bottom: 0.8rem;">
-              <h4 class="hl-red">① Distance to Next</h4>
-              <p>Cosine distance between consecutive points. <strong>Semantic jump size</strong>.</p>
-            </div>
-            <div class="metric-card gold-accent stagger-card" style="margin-bottom: 0.8rem;">
-              <h4 class="hl-gold">② Velocity</h4>
-              <p><span class="math-inline">v<sub>t</sub> = x<sub>t+1</sub> − x<sub>t</sub></span> — Direction and magnitude of each step.</p>
-            </div>
-            <div class="metric-card green-accent stagger-card" style="margin-bottom: 0.8rem;">
-              <h4 class="hl-green">③ Acceleration</h4>
-              <p><span class="math-inline">a<sub>t</sub> = v<sub>t+1</sub> − v<sub>t</sub></span> — Low → stable cluster. High → erratic switch.</p>
-            </div>
-            <div class="metric-card blue-accent stagger-card" style="margin-bottom: 0.8rem;">
-              <h4 class="hl-blue">④ Entropy</h4>
-              <p>Shannon entropy of median-split steps. Measures <strong>predictability</strong> of the semantic search.</p>
-            </div>
-            <div class="metric-card pink-accent stagger-card">
-              <h4 class="hl-pink">⑤ Distance to Centroid</h4>
-              <p>Distance to mean position of all items. Captures <strong>dispersion</strong> of the search.</p>
-            </div>
-          </div>
+      <div class="col-5 stagger-container">
+        <div class="metric-card red-b stagger-card">
+          <h4 class="red">① Distance to Next</h4>
+          <p>Cosine distance between consecutive points. <strong>Semantic jump size</strong>.</p>
+        </div>
+        <div class="metric-card gold-b stagger-card">
+          <h4 class="gold">② Velocity</h4>
+          <p><span class="math-code">v<sub>t</sub> = x<sub>t+1</sub> − x<sub>t</sub></span><br>Direction + magnitude of each step.</p>
+        </div>
+        <div class="metric-card green-b stagger-card">
+          <h4 class="green">③ Acceleration</h4>
+          <p><span class="math-code">a<sub>t</sub> = v<sub>t+1</sub> − v<sub>t</sub></span><br>Low → stable cluster. High → erratic switch.</p>
+        </div>
+        <div class="metric-card blue-b stagger-card">
+          <h4 class="blue">④ Entropy</h4>
+          <p>Shannon entropy of median-split steps. <strong>Predictability</strong> of the search.</p>
+        </div>
+        <div class="metric-card pink-b stagger-card">
+          <h4 class="pink">⑤ Distance to Centroid</h4>
+          <p>Distance to mean position of all items. <strong>Dispersion</strong> of the search.</p>
         </div>
       </div>
     </div>
@@ -423,311 +187,169 @@
 <!-- ════════════════════════════════════════════
      DATASETS
      ════════════════════════════════════════════ -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full fade-section">
-        <h2 class="title is-3 has-text-centered">Four Datasets · Four Languages · Two Tasks</h2>
+<section class="section-block grid-bg">
+  <div class="container-main fade-section">
+    <span class="tag-badge">Experimental Setup</span>
+    <h2 style="margin-bottom: 1.5rem;">Four datasets · Four languages · Two tasks</h2>
 
-        <div class="stagger-container" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 2rem;">
-          <!-- Neurodegenerative -->
-          <div class="metric-card blue-accent stagger-card">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem;">
-              <span style="font-size: 1.5rem;">🧠</span>
-              <div>
-                <h4 class="hl-blue" style="margin-bottom: 0;">Neurodegenerative</h4>
-                <span style="font-size: 0.8rem; color: var(--text-light);">ES 🇨🇱 · N=76 · Property Listing</span>
-              </div>
-            </div>
-            <p>Three groups: Healthy Controls (HC), Parkinson's Disease (PD), and behavioral variant Frontotemporal Dementia (bvFTD).</p>
-          </div>
-
-          <!-- Swear Fluency -->
-          <div class="metric-card gold-accent stagger-card">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem;">
-              <span style="font-size: 1.5rem;">🤬</span>
-              <div>
-                <h4 class="hl-gold" style="margin-bottom: 0;">Swear Fluency</h4>
-                <span style="font-size: 0.8rem; color: var(--text-light);">EN 🇺🇸 · N=274 · Verbal Fluency</span>
-              </div>
-            </div>
-            <p>Three categories: swear words, animals, and letters. Compares structured vs. taboo lexicons.</p>
-          </div>
-
-          <!-- Italian PLT -->
-          <div class="metric-card green-accent stagger-card">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem;">
-              <span style="font-size: 1.5rem;">🇮🇹</span>
-              <div>
-                <h4 class="hl-green" style="margin-bottom: 0;">Italian PLT</h4>
-                <span style="font-size: 0.8rem; color: var(--text-light);">IT · N=69 · Property Listing</span>
-              </div>
-            </div>
-            <p>Ten semantic categories. Cross-linguistic validation of trajectory metrics.</p>
-          </div>
-
-          <!-- German PLT -->
-          <div class="metric-card pink-accent stagger-card">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem;">
-              <span style="font-size: 1.5rem;">🇩🇪</span>
-              <div>
-                <h4 class="hl-pink" style="margin-bottom: 0;">German PLT</h4>
-                <span style="font-size: 0.8rem; color: var(--text-light);">DE · N=73 · Property Listing</span>
-              </div>
-            </div>
-            <p>Ten semantic categories. Parallel protocol to Italian, different cultural-linguistic structure.</p>
+    <div class="dataset-grid stagger-container" style="margin-bottom: 1.5rem;">
+      <div class="metric-card blue-b stagger-card">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:8px;">
+          <span style="font-size:1.5rem;">🧠</span>
+          <div>
+            <h4 class="blue" style="margin:0;">Neurodegenerative</h4>
+            <span class="dim" style="font-size:0.85rem;">ES 🇨🇱 · N=76 · Property Listing Task</span>
           </div>
         </div>
-
-        <div style="text-align: center; margin-top: 2rem;">
-          <div class="dataset-badge blue" style="margin: 0.3rem;">OpenAI text-embedding-3-large</div>
-          <div class="dataset-badge gold" style="margin: 0.3rem;">Google text-embedding-004</div>
-          <div class="dataset-badge green" style="margin: 0.3rem;">Qwen3-Embedding-0.6B</div>
-          <div class="dataset-badge pink" style="margin: 0.3rem;">fastText (baseline)</div>
+        <p>Three groups: Healthy Controls (HC), Parkinson's Disease (PD), and behavioral variant Frontotemporal Dementia (bvFTD).</p>
+      </div>
+      <div class="metric-card gold-b stagger-card">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:8px;">
+          <span style="font-size:1.5rem;">🤬</span>
+          <div>
+            <h4 class="gold" style="margin:0;">Swear Fluency</h4>
+            <span class="dim" style="font-size:0.85rem;">EN 🇺🇸 · N=274 · Verbal Fluency Task</span>
+          </div>
         </div>
+        <p>Three categories: swear words, animals, and letters. Compares structured vs. taboo lexicons.</p>
+      </div>
+      <div class="metric-card green-b stagger-card">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:8px;">
+          <span style="font-size:1.5rem;">🇮🇹</span>
+          <div>
+            <h4 class="green" style="margin:0;">Italian PLT</h4>
+            <span class="dim" style="font-size:0.85rem;">IT · N=69 · Property Listing · 10 categories</span>
+          </div>
+        </div>
+        <p>Cross-linguistic validation of trajectory metrics across semantic categories.</p>
+      </div>
+      <div class="metric-card pink-b stagger-card">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:8px;">
+          <span style="font-size:1.5rem;">🇩🇪</span>
+          <div>
+            <h4 class="pink" style="margin:0;">German PLT</h4>
+            <span class="dim" style="font-size:0.85rem;">DE · N=73 · Property Listing · 10 categories</span>
+          </div>
+        </div>
+        <p>Parallel protocol to Italian. Different cultural-linguistic structure.</p>
       </div>
     </div>
+
+    <div style="text-align: center;">
+      <span class="metric-pill blue">OpenAI text-embedding-3-large</span>
+      <span class="metric-pill gold">Google text-embedding-004</span>
+      <span class="metric-pill green">Qwen3-Embedding-0.6B</span>
+      <span class="metric-pill pink">fastText (baseline)</span>
+    </div>
+    <p class="dim center" style="font-size: 0.9rem; margin-top: 1rem;">
+      Statistics: Generalized Linear Mixed Models (GLMMs) with Tukey HSD post-hoc correction.
+    </p>
   </div>
 </section>
 
 
 <!-- ════════════════════════════════════════════
-     RESULTS 1 — Neurodegenerative (animated trajectories)
+     RESULTS: NEURODEGENERATIVE
      ════════════════════════════════════════════ -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full fade-section">
-        <h2 class="title is-3 has-text-centered">Neurodegenerative Patients Show <span class="hl-red">Erratic</span>, <span class="hl-pink">Constricted</span> Navigation</h2>
-
-        <div class="columns is-vcentered" style="margin-top: 2rem;">
-          <div class="column is-7">
-            <div class="diagram-container anim-trigger">
-              <svg viewBox="0 0 520 400" preserveAspectRatio="xMidYMid meet">
-                <!-- HC trajectory (smooth) -->
-                <text x="110" y="30" fill="#16a34a" font-size="16" font-weight="700">Healthy Control</text>
-                <text x="110" y="48" fill="#94a3b8" font-size="11">Organized · Broad · Predictable</text>
-
-                <path d="M 60,145 L 130,120 L 200,115 L 270,100 L 340,90 L 410,85 L 470,70"
-                      fill="none" stroke="rgba(22,163,74,0.06)" stroke-width="14" stroke-linecap="round"/>
-                <path class="traj-line" d="M 60,145 L 130,120 L 200,115 L 270,100 L 340,90 L 410,85 L 470,70"
-                      fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
-                <circle cx="60"  cy="145" r="6" fill="#16a34a" opacity="0.7"/>
-                <circle cx="200" cy="115" r="6" fill="#16a34a" opacity="0.7"/>
-                <circle cx="340" cy="90"  r="6" fill="#16a34a" opacity="0.7"/>
-                <circle cx="470" cy="70"  r="6" fill="#16a34a" class="dot-pulse"/>
-
-                <!-- HC centroid far -->
-                <circle cx="265" cy="62" r="6" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.4"/>
-                <text x="280" y="60" fill="#16a34a" font-size="10" opacity="0.5">centroid (far)</text>
-
-                <!-- Divider -->
-                <line x1="30" y1="200" x2="490" y2="200" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
-
-                <!-- Patient trajectory (erratic) -->
-                <text x="110" y="225" fill="#dc2626" font-size="16" font-weight="700">PD / bvFTD</text>
-                <text x="110" y="243" fill="#94a3b8" font-size="11">Erratic · Constricted · Unpredictable</text>
-
-                <ellipse cx="265" cy="325" rx="100" ry="55" fill="none" stroke="rgba(220,38,38,0.1)" stroke-width="1.5" stroke-dasharray="5 3"/>
-
-                <path d="M 195,320 L 255,285 L 225,350 L 310,275 L 280,345 L 340,305 L 320,325"
-                      fill="none" stroke="rgba(220,38,38,0.06)" stroke-width="14" stroke-linecap="round"/>
-                <path class="traj-line" d="M 195,320 L 255,285 L 225,350 L 310,275 L 280,345 L 340,305 L 320,325"
-                      fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
-                <circle cx="195" cy="320" r="6" fill="#dc2626" opacity="0.7"/>
-                <circle cx="255" cy="285" r="6" fill="#dc2626" opacity="0.7"/>
-                <circle cx="225" cy="350" r="6" fill="#dc2626" opacity="0.7"/>
-                <circle cx="310" cy="275" r="6" fill="#dc2626" opacity="0.7"/>
-                <circle cx="340" cy="305" r="6" fill="#dc2626" class="dot-pulse"/>
-
-                <!-- Patient centroid close -->
-                <circle cx="270" cy="318" r="6" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.4"/>
-                <text x="285" y="316" fill="#9333ea" font-size="10" opacity="0.6">centroid (near)</text>
-              </svg>
-            </div>
-          </div>
-          <div class="column is-5 stagger-container">
-            <div class="metric-card red-accent stagger-card" style="margin-bottom: 1rem;">
-              <h4 class="hl-red">↑ Higher in patients</h4>
-              <p><strong>Distance to Next</strong> — larger semantic jumps<br>
-                <strong>Velocity</strong> — erratic movement<br>
-                <strong>Acceleration</strong> — abrupt direction changes<br>
-                <strong>Entropy</strong> — unpredictable search</p>
-            </div>
-            <div class="metric-card green-accent stagger-card" style="margin-bottom: 1rem;">
-              <h4 class="hl-green">↓ Lower in patients</h4>
-              <p><strong>Distance to Centroid</strong> — search confined to a tight neighborhood despite being more volatile.</p>
-            </div>
-            <div class="callout-box stagger-card">
-              <p>
-                <strong class="hl-gold">Interpretation:</strong> a kinematic signature of <em>executive dysfunction</em> — volatile trajectories within a <em>diminished</em> semantic space.
-              </p>
-            </div>
-          </div>
+<section class="section-block grid-bg">
+  <div class="container-main fade-section">
+    <span class="tag-badge">Results</span>
+    <h2 style="margin-bottom: 1.5rem;">
+      Neurodegenerative patients show <span class="red">erratic</span>, <span class="pink">constricted</span> navigation
+    </h2>
+    <div class="row">
+      <div class="col-7">
+        <div class="diagram">
+          <img src="static/images/slide7-neurodegenerative.svg" alt="Healthy vs neurodegenerative trajectory comparison">
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════════
-     RESULTS 2 — Swear Words & Cross-Linguistic
-     ════════════════════════════════════════════ -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full fade-section">
-        <h2 class="title is-3 has-text-centered">Swear Words &amp; Cross-Linguistic Structure</h2>
-
-        <div class="columns is-vcentered" style="margin-top: 2rem;">
-          <div class="column is-7">
-            <div class="diagram-container anim-trigger">
-              <svg viewBox="0 0 520 310" preserveAspectRatio="xMidYMid meet">
-                <!-- Animals: organized, spread -->
-                <text x="130" y="25" fill="#16a34a" font-size="14" font-weight="700" text-anchor="middle">Animals</text>
-                <ellipse cx="130" cy="130" rx="110" ry="85" fill="none" stroke="rgba(22,163,74,0.12)" stroke-width="1.5"/>
-                <!-- Sub-clusters -->
-                <circle cx="85" cy="110" r="35" fill="none" stroke="rgba(22,163,74,0.08)" stroke-width="1" stroke-dasharray="3 3"/>
-                <circle cx="170" cy="100" r="30" fill="none" stroke="rgba(22,163,74,0.08)" stroke-width="1" stroke-dasharray="3 3"/>
-                <circle cx="130" cy="170" r="28" fill="none" stroke="rgba(22,163,74,0.08)" stroke-width="1" stroke-dasharray="3 3"/>
-                <text x="85"  y="96"  fill="#94a3b8" font-size="10" text-anchor="middle">pets</text>
-                <text x="170" y="86"  fill="#94a3b8" font-size="10" text-anchor="middle">farm</text>
-                <text x="130" y="195" fill="#94a3b8" font-size="10" text-anchor="middle">sea</text>
-
-                <circle cx="72"  cy="108" r="4" fill="#16a34a" opacity="0.6"/>
-                <circle cx="95"  cy="120" r="4" fill="#16a34a" opacity="0.6"/>
-                <circle cx="160" cy="100" r="4" fill="#16a34a" opacity="0.6"/>
-                <circle cx="180" cy="113" r="4" fill="#16a34a" opacity="0.6"/>
-                <circle cx="120" cy="165" r="4" fill="#16a34a" opacity="0.6"/>
-                <circle cx="142" cy="175" r="4" fill="#16a34a" opacity="0.6"/>
-
-                <path class="traj-line" d="M 72,108 L 95,120 L 85,105 L 160,100 L 180,113 L 120,165 L 142,175"
-                      fill="none" stroke="#16a34a" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
-
-                <text x="130" y="240" fill="#16a34a" font-size="11" text-anchor="middle" opacity="0.6">structured sub-categories → organized, broad</text>
-
-                <!-- Swear: compact, erratic -->
-                <text x="390" y="25" fill="#dc2626" font-size="14" font-weight="700" text-anchor="middle">Swear Words</text>
-                <ellipse cx="390" cy="130" rx="70" ry="65" fill="none" stroke="rgba(220,38,38,0.12)" stroke-width="1.5"/>
-
-                <circle cx="368" cy="110" r="4" fill="#dc2626" opacity="0.6"/>
-                <circle cx="405" cy="100" r="4" fill="#dc2626" opacity="0.6"/>
-                <circle cx="385" cy="145" r="4" fill="#dc2626" opacity="0.6"/>
-                <circle cx="415" cy="128" r="4" fill="#dc2626" opacity="0.6"/>
-                <circle cx="375" cy="155" r="4" fill="#dc2626" opacity="0.6"/>
-                <circle cx="405" cy="160" r="4" fill="#dc2626" opacity="0.6"/>
-
-                <path class="traj-line" d="M 368,110 L 405,100 L 375,155 L 415,128 L 385,145 L 405,160 L 390,120"
-                      fill="none" stroke="#dc2626" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
-
-                <text x="390" y="240" fill="#dc2626" font-size="11" text-anchor="middle" opacity="0.6">no sub-structure → compact, erratic</text>
-
-                <!-- Bottom comparison -->
-                <rect x="30" y="260" width="200" height="35" rx="10" fill="rgba(22,163,74,0.04)" stroke="rgba(22,163,74,0.12)" stroke-width="1"/>
-                <text x="130" y="283" fill="#16a34a" font-size="11" text-anchor="middle" font-weight="500">↓ velocity · ↓ entropy · ↑ centroid</text>
-
-                <rect x="290" y="260" width="200" height="35" rx="10" fill="rgba(220,38,38,0.04)" stroke="rgba(220,38,38,0.12)" stroke-width="1"/>
-                <text x="390" y="283" fill="#dc2626" font-size="11" text-anchor="middle" font-weight="500">↑ velocity · ↑ entropy · ↓ centroid</text>
-              </svg>
-            </div>
-          </div>
-          <div class="column is-5 stagger-container">
-            <div class="metric-card red-accent stagger-card" style="margin-bottom: 1rem;">
-              <h4 class="hl-red">Swear Words</h4>
-              <p>Highest kinematic values across all metrics. Taboo lexicons lack sub-category structure → <strong>high variability in a compact space</strong>.</p>
-            </div>
-            <div class="metric-card green-accent stagger-card" style="margin-bottom: 1rem;">
-              <h4 class="hl-green">Animals</h4>
-              <p>Lowest kinematic values, highest centroid distance. Structured sub-categories allow <strong>organized exploitation</strong>.</p>
-            </div>
-            <div class="metric-card blue-accent stagger-card">
-              <h4 class="hl-blue">🇮🇹 🇩🇪 Cross-Linguistic</h4>
-              <p>Italian and German datasets reveal <strong>language-specific</strong> category discrimination. Same protocol, different category effects — cultural and linguistic structure shapes semantic organization.</p>
-            </div>
-          </div>
+      <div class="col-5 stagger-container">
+        <div class="metric-card red-b stagger-card">
+          <h4 class="red">↑ Higher in patients</h4>
+          <p><strong>Distance to Next</strong> — larger semantic jumps<br>
+             <strong>Velocity</strong> — erratic movement<br>
+             <strong>Acceleration</strong> — abrupt direction changes<br>
+             <strong>Entropy</strong> — unpredictable search</p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════════
-     RESULTS 3 — Model Robustness (animated bars)
-     ════════════════════════════════════════════ -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full fade-section">
-        <h2 class="title is-3 has-text-centered">Different Models, <span class="hl-gold">Convergent</span> Geometry</h2>
-        <p class="has-text-centered" style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-          Inter-model agreement per metric (Pearson <em>r</em> across embedding models):
+        <div class="metric-card green-b stagger-card">
+          <h4 class="green">↓ Lower in patients</h4>
+          <p><strong>Distance to Centroid</strong> — search confined to a tighter neighborhood despite being more volatile.</p>
+        </div>
+        <div class="callout stagger-card">
+          <p style="color: var(--text);"><span class="gold">Interpretation:</span> a kinematic signature of <em>executive dysfunction</em> — volatile trajectories within a <em>diminished</em> semantic space.</p>
+        </div>
+        <p class="dim stagger-card" style="margin-top: 14px; font-size: 0.95rem;">
+          PD and bvFTD did not differ from each other — both show similarly disrupted navigation relative to healthy controls.
         </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="columns is-vcentered">
-          <div class="column is-7">
-            <div class="diagram-container anim-trigger counter-group">
-              <svg viewBox="0 0 520 310" preserveAspectRatio="xMidYMid meet">
-                <!-- Scale -->
-                <text x="140" y="20" fill="#94a3b8" font-size="10">0.0</text>
-                <text x="310" y="20" fill="#94a3b8" font-size="10" text-anchor="middle">0.5</text>
-                <text x="470" y="20" fill="#94a3b8" font-size="10" text-anchor="end">1.0</text>
-                <line x1="140" y1="26" x2="470" y2="26" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
 
-                <!-- Bar 1: Distance to Next r≈0.91 -->
-                <text x="130" y="58" fill="#dc2626" font-size="13" text-anchor="end" font-weight="600">Dist. to Next</text>
-                <rect x="140" y="44" width="330" height="22" rx="11" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
-                <rect class="bar-fill" x="140" y="44" width="300" height="22" rx="11" fill="rgba(220,38,38,0.5)" style="transition-delay:0.2s;"/>
-                <text x="452" y="60" fill="#dc2626" font-size="13" font-weight="700">r ≈ 0.91</text>
-
-                <!-- Bar 2: Velocity r≈0.93 -->
-                <text x="130" y="102" fill="#d4a017" font-size="13" text-anchor="end" font-weight="600">Velocity</text>
-                <rect x="140" y="88" width="330" height="22" rx="11" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
-                <rect class="bar-fill" x="140" y="88" width="307" height="22" rx="11" fill="rgba(212,160,23,0.5)" style="transition-delay:0.4s;"/>
-                <text x="458" y="104" fill="#d4a017" font-size="13" font-weight="700">r ≈ 0.93</text>
-
-                <!-- Bar 3: Acceleration r≈0.90 -->
-                <text x="130" y="146" fill="#16a34a" font-size="13" text-anchor="end" font-weight="600">Acceleration</text>
-                <rect x="140" y="132" width="330" height="22" rx="11" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
-                <rect class="bar-fill" x="140" y="132" width="297" height="22" rx="11" fill="rgba(22,163,74,0.45)" style="transition-delay:0.6s;"/>
-                <text x="448" y="148" fill="#16a34a" font-size="13" font-weight="700">r ≈ 0.90</text>
-
-                <!-- Bar 4: Entropy r≈0.97 -->
-                <text x="130" y="190" fill="#2563eb" font-size="13" text-anchor="end" font-weight="600">Entropy</text>
-                <rect x="140" y="176" width="330" height="22" rx="11" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
-                <rect class="bar-fill" x="140" y="176" width="320" height="22" rx="11" fill="rgba(37,99,235,0.5)" style="transition-delay:0.8s;"/>
-                <text x="472" y="192" fill="#2563eb" font-size="13" font-weight="700">r ≈ 0.97 ★</text>
-
-                <!-- Bar 5: Centroid r≈0.38 -->
-                <text x="130" y="234" fill="#9333ea" font-size="13" text-anchor="end" font-weight="600">Centroid</text>
-                <rect x="140" y="220" width="330" height="22" rx="11" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
-                <rect class="bar-fill" x="140" y="220" width="125" height="22" rx="11" fill="rgba(147,51,234,0.4)" style="transition-delay:1.0s;"/>
-                <text x="278" y="236" fill="#9333ea" font-size="13" font-weight="700">r ≈ 0.38 ⚠</text>
-
-                <!-- Bracket: local kinematics -->
-                <path d="M 125,46 L 118,46 L 118,155 L 125,155" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
-                <text x="114" y="105" fill="#64748b" font-size="10" text-anchor="end" font-weight="500">local</text>
-              </svg>
-            </div>
+<!-- ════════════════════════════════════════════
+     RESULTS: SWEAR + CROSS-LINGUISTIC
+     ════════════════════════════════════════════ -->
+<section class="section-block grid-bg">
+  <div class="container-main fade-section">
+    <span class="tag-badge">Results</span>
+    <h2 style="margin-bottom: 1.5rem;">Swear words &amp; cross-linguistic structure</h2>
+    <div class="row">
+      <div class="col-7">
+        <div class="diagram">
+          <img src="static/images/slide8-swear-category.svg" alt="Animals vs swear words semantic structure">
+        </div>
+      </div>
+      <div class="col-5 stagger-container">
+        <div class="metric-card red-b stagger-card">
+          <h4 class="red">Swear Words</h4>
+          <p>Highest kinematic values. Taboo lexicons lack sub-category structure → <strong>high variability in a compact space</strong>.</p>
+        </div>
+        <div class="metric-card green-b stagger-card">
+          <h4 class="green">Animals</h4>
+          <p>Lowest kinematic values, highest centroid distance. Structured sub-categories allow <strong>organized exploitation</strong>.</p>
+        </div>
+        <div class="metric-card blue-b stagger-card">
+          <h4 class="blue">🇮🇹 IT · 🇩🇪 GE — Cross-linguistic</h4>
+          <p>Italian and German datasets reveal <span class="blue">language-specific</span> category discrimination. Same protocol, but different category effects — cultural and linguistic structure shapes how meaning is organized.</p>
+          <div style="margin-top: 12px;">
+            <img src="static/images/slide8b-cross-linguistic.svg" alt="Cross-linguistic category structure" style="width:100%; border-radius:10px;">
           </div>
-          <div class="column is-5 stagger-container">
-            <div class="metric-card green-accent stagger-card" style="margin-bottom: 1rem;">
-              <h4 class="hl-green">✓ Robust across models</h4>
-              <p><strong>Velocity, Acceleration, Distance-to-Next</strong> — high cross-model correlation. Local trajectory dynamics are <em>encoder-invariant</em>.</p>
-            </div>
-            <div class="metric-card blue-accent stagger-card" style="margin-bottom: 1rem;">
-              <h4 class="hl-blue">✓ Entropy: near-perfect</h4>
-              <p>Depends on <em>rank ordering</em>, not absolute distances. Median binarization absorbs model differences.</p>
-            </div>
-            <div class="metric-card pink-accent stagger-card" style="margin-bottom: 1rem;">
-              <h4 class="hl-pink">⚠ Centroid: model-dependent</h4>
-              <p>Static global average more sensitive to each model's high-level geometry. Potential tool for comparing <strong>how models structure knowledge</strong>.</p>
-            </div>
-            <div class="callout-box stagger-card">
-              <p><strong class="hl-gold">→</strong> Different models learn <em>similar local dynamics</em> despite different training pipelines and architectures (causal vs. bidirectional).</p>
-            </div>
-          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     MODEL ROBUSTNESS
+     ════════════════════════════════════════════ -->
+<section class="section-block grid-bg">
+  <div class="container-main fade-section">
+    <span class="tag-badge">Robustness</span>
+    <h2 style="margin-bottom: 1.5rem;">Different models, <span class="gold">convergent</span> geometry</h2>
+    <div class="row">
+      <div class="col-7">
+        <div class="diagram">
+          <img src="static/images/slide9-model-robustness.svg" alt="Inter-model agreement per metric">
+        </div>
+      </div>
+      <div class="col-5 stagger-container">
+        <div class="metric-card green-b stagger-card">
+          <h4 class="green">✓ Robust across models</h4>
+          <p><strong>Velocity, Acceleration, Distance-to-Next</strong> — high cross-model correlation. Local trajectory dynamics are <em>encoder-invariant</em>.</p>
+        </div>
+        <div class="metric-card blue-b stagger-card">
+          <h4 class="blue">✓ Entropy: near-perfect</h4>
+          <p>Depends on <em>rank ordering</em>, not absolute distances. Median binarization absorbs model differences.</p>
+        </div>
+        <div class="metric-card pink-b stagger-card">
+          <h4 class="pink">⚠ Centroid: model-dependent</h4>
+          <p>Static global average is more sensitive to each model's high-level geometry. Potential tool for comparing <strong>how models structure knowledge</strong>.</p>
+        </div>
+        <div class="callout stagger-card">
+          <p style="color: var(--text);"><span class="gold">→</span> Different models learn <em>similar local dynamics</em> despite different training pipelines (causal vs. bidirectional).</p>
         </div>
       </div>
     </div>
@@ -738,108 +360,78 @@
 <!-- ════════════════════════════════════════════
      CUMULATIVE vs NON-CUMULATIVE
      ════════════════════════════════════════════ -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full fade-section">
-        <h2 class="title is-3 has-text-centered"><span class="hl-blue">Cumulative</span> vs. <span class="hl-red">Non-Cumulative</span>: Trajectory Length Matters</h2>
-
-        <div class="comparison-grid stagger-container" style="margin-top: 2rem;">
-          <div class="comparison-card stagger-card" style="border-color: rgba(37,99,235,0.2); background: rgba(37,99,235,0.02);">
-            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">
-              <span class="hl-blue">Cumulative</span> → Long Sequences
-            </h4>
-            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">
-              Neurodegenerative (~20 items) · Swear Fluency (~21 items)
-            </p>
-            <p style="color: var(--text-secondary); font-size: 0.95rem;">
-              Longer trajectories provide rich context that cumulative embeddings leverage — <strong>more significant group differences</strong> and higher effect sizes.
-            </p>
-          </div>
-          <div class="comparison-card stagger-card" style="border-color: rgba(220,38,38,0.2); background: rgba(220,38,38,0.02);">
-            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">
-              <span class="hl-red">Non-Cumulative</span> → Short Sequences
-            </h4>
-            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">
-              Italian (~5 items) · German (~5.5 items)
-            </p>
-            <p style="color: var(--text-secondary); font-size: 0.95rem;">
-              With only ~5 items, there is <strong>too little context</strong> to accumulate. Point-to-point variation retains more discriminative signal.
-            </p>
-          </div>
-        </div>
-        <div class="callout-box" style="max-width: 700px; margin: 1.5rem auto 0; text-align: center;">
-          <p>
-            <strong class="hl-gold">Practical guideline:</strong> Use cumulative for ≥15 items (fluency tasks), non-cumulative for ≤6 items (property listing). Both approaches are <em>complementary</em>.
-          </p>
-        </div>
+<section class="section-block grid-bg">
+  <div class="container-main fade-section">
+    <span class="tag-badge">Key Finding</span>
+    <h2 style="margin-bottom: 1.5rem;">
+      <span class="gold">Cumulative</span> vs. <span class="red">non-cumulative</span>: trajectory length matters
+    </h2>
+    <div class="diagram" style="margin-bottom: 1.5rem;">
+      <img src="static/images/slide4-cumul-vs-noncumul.svg" alt="Cumulative vs non-cumulative trajectory comparison">
+    </div>
+    <div class="comparison-grid stagger-container">
+      <div class="metric-card blue-b stagger-card">
+        <h4 class="blue">Cumulative → long sequences</h4>
+        <p style="margin-bottom:8px;">Neurodegenerative (~20 items) · Swear Fluency (~21 items)</p>
+        <p>Longer trajectories provide rich context that cumulative embeddings leverage — <strong>more significant group differences</strong> and higher effect sizes.</p>
       </div>
+      <div class="metric-card red-b stagger-card">
+        <h4 class="red">Non-cumulative → short sequences</h4>
+        <p style="margin-bottom:8px;">Italian (~5 items) · German (~5.5 items)</p>
+        <p>With only ~5 items, there is <strong>too little context</strong> to accumulate. Point-to-point variation retains more discriminative signal.</p>
+      </div>
+    </div>
+    <div class="callout" style="max-width: 750px; margin: 1.5rem auto 0; text-align: center;">
+      <p><strong>Practical guideline:</strong> use cumulative for ≥15 items (fluency tasks), non-cumulative for ≤6 items (property listing). Both approaches are <em>complementary</em>.</p>
     </div>
   </div>
 </section>
 
 
 <!-- ════════════════════════════════════════════
-     CONCLUSION — Takeaways
+     CONCLUSION
      ════════════════════════════════════════════ -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full fade-section">
-        <h2 class="title is-3 has-text-centered">A <span class="hl-gold">Geometric Framework</span> for Semantic Navigation</h2>
+<section class="section-block grid-bg">
+  <div class="container-main fade-section">
+    <span class="tag-badge">Conclusion</span>
+    <h2 class="center" style="margin-bottom: 2rem;">
+      A <span class="gold">geometric framework</span> for human semantic navigation
+    </h2>
 
-        <div class="takeaway-grid stagger-container">
-          <div class="takeaway-item stagger-card">
-            <div class="takeaway-icon" style="border-color: var(--blue); color: var(--blue);">①</div>
-            <div>
-              <p style="font-size: 1rem; line-height: 1.7;"><strong class="hl-blue">Cumulative trajectory metrics</strong> capture fine-grained navigation dynamics beyond binary clustering/switching.</p>
-            </div>
-          </div>
-          <div class="takeaway-item stagger-card">
-            <div class="takeaway-icon" style="border-color: var(--gold); color: var(--gold);">②</div>
-            <div>
-              <p style="font-size: 1rem; line-height: 1.7;"><strong class="hl-gold">Clinical utility</strong> — distinguishes neurodegenerative patients from controls via kinematic signatures of executive dysfunction.</p>
-            </div>
-          </div>
-          <div class="takeaway-item stagger-card">
-            <div class="takeaway-icon" style="border-color: var(--green); color: var(--green);">③</div>
-            <div>
-              <p style="font-size: 1rem; line-height: 1.7;"><strong class="hl-green">Cross-linguistic &amp; cross-domain</strong> — discriminates semantic categories and reveals language-specific organization.</p>
-            </div>
-          </div>
-          <div class="takeaway-item stagger-card">
-            <div class="takeaway-icon" style="border-color: var(--pink); color: var(--pink);">④</div>
-            <div>
-              <p style="font-size: 1rem; line-height: 1.7;"><strong class="hl-pink">Model-robust</strong> — convergent results across three embedding architectures for local dynamics.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="callout-box" style="max-width: 800px; margin: 2rem auto 0; text-align: center;">
-          <p style="font-size: 1.05rem;">
-            <strong class="hl-gold">Future directions:</strong> temporal timestamps · non-Euclidean metrics · richer information theory · applying the framework to <em>LLMs</em> — comparing human vs. artificial semantic navigation.
-          </p>
-        </div>
+    <div class="takeaway-grid stagger-container">
+      <div class="takeaway-item stagger-card">
+        <div class="takeaway-icon" style="border-color: var(--blue); color: var(--blue);">①</div>
+        <p><span class="blue"><strong>Cumulative trajectory metrics</strong></span> capture fine-grained navigation dynamics beyond binary clustering/switching.</p>
       </div>
+      <div class="takeaway-item stagger-card">
+        <div class="takeaway-icon" style="border-color: var(--gold); color: var(--gold);">②</div>
+        <p><span class="gold"><strong>Clinical utility</strong></span> — distinguishes neurodegenerative patients from controls via kinematic signatures of executive dysfunction.</p>
+      </div>
+      <div class="takeaway-item stagger-card">
+        <div class="takeaway-icon" style="border-color: var(--green); color: var(--green);">③</div>
+        <p><span class="green"><strong>Cross-linguistic &amp; cross-domain</strong></span> — discriminates semantic categories and reveals language-specific organization.</p>
+      </div>
+      <div class="takeaway-item stagger-card">
+        <div class="takeaway-icon" style="border-color: var(--pink); color: var(--pink);">④</div>
+        <p><span class="pink"><strong>Model-robust</strong></span> — convergent results across three embedding architectures for local dynamics.</p>
+      </div>
+    </div>
+
+    <div class="callout" style="max-width: 800px; margin: 2rem auto 0; text-align: center;">
+      <p><strong>Future:</strong> temporal timestamps · non-Euclidean metrics · richer information theory · applying the framework to <em>LLMs</em> — comparing human vs. artificial semantic navigation.</p>
     </div>
   </div>
 </section>
 
 
-
-
-
 <!-- ════════════════════════════════════════════
-     BibTeX
+     BIBTEX
      ════════════════════════════════════════════ -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
+<section class="section-block bibtex-section">
+  <div class="container-main fade-section">
     <div class="bibtex-header">
-      <h2 class="title" style="margin-bottom: 0;">BibTeX</h2>
-      <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-        <i class="fas fa-copy"></i>
-        <span class="copy-text">Copy</span>
-      </button>
+      <h3 style="color: var(--text); margin: 0;">BibTeX</h3>
+      <button class="copy-btn" onclick="copyBibTeX()">⎘ Copy</button>
     </div>
     <pre id="bibtex-code"><code>@inproceedings{
 toro-hernandez2026characterizing,
@@ -856,24 +448,14 @@ url={https://openreview.net/forum?id=QQVmIR97sf}
 <!-- ════════════════════════════════════════════
      FOOTER
      ════════════════════════════════════════════ -->
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content" style="text-align: center;">
-          <p>
-            This page was built using the
-            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>
-            adopted from <a href="https://nerfies.github.io" target="_blank">Nerfies</a>.
-            Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
-          </p>
-        </div>
-      </div>
-    </div>
+<div class="footer-section">
+  <div class="container-main">
+    <p>
+      Built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+      Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+    </p>
   </div>
-</footer>
-
-</main>
+</div>
 
 </body>
 </html>
