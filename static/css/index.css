@@ -1,0 +1,526 @@
+/* ═══════════════════════════════════════════════════════
+   Semantic Trajectories — Academic Project Page Styles
+   Inspired by 3Blue1Brown visual language
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary-color: #64748b;
+  --accent-color: #0ea5e9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-light: #94a3b8;
+  --background-primary: #ffffff;
+  --background-secondary: #f8fafc;
+  --background-accent: #f1f5f9;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --border-radius: 12px;
+  --border-radius-lg: 16px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Paper accent palette */
+  --blue: #2563eb;
+  --gold: #d4a017;
+  --green: #16a34a;
+  --red: #dc2626;
+  --pink: #9333ea;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+  background: var(--background-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Hero ── */
+.hero-dark {
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-dark .hero-body { position: relative; z-index: 2; padding: 6rem 1.5rem; }
+
+#hero-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.hero-dark .publication-title {
+  color: #f1f5f9 !important;
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem !important;
+}
+
+.hero-dark .publication-authors { color: #cbd5e1; }
+.hero-dark .publication-authors a { color: #93c5fd !important; }
+.hero-dark .publication-authors a:hover { color: #bfdbfe !important; }
+.hero-dark .eql-cntrb { color: #64748b; }
+
+.hero-dark .venue-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(147,51,234,0.2));
+  border: 1px solid rgba(37,99,235,0.3);
+  color: #93c5fd;
+  padding: 0.4rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero-dark .button.is-dark {
+  background: rgba(255,255,255,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  color: #e2e8f0 !important;
+  backdrop-filter: blur(8px);
+}
+.hero-dark .button.is-dark:hover {
+  background: rgba(37,99,235,0.3) !important;
+  border-color: rgba(37,99,235,0.5) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37,99,235,0.2);
+}
+
+/* Highlight spans */
+.hl-blue { color: var(--blue); }
+.hl-gold { color: var(--gold); }
+.hl-green { color: var(--green); }
+.hl-red { color: var(--red); }
+.hl-pink { color: var(--pink); }
+
+/* ── Buttons ── */
+.button {
+  border-radius: var(--border-radius) !important;
+  font-weight: 600 !important;
+  transition: var(--transition) !important;
+  border: 2px solid transparent !important;
+  position: relative;
+  overflow: hidden;
+}
+.button.is-dark {
+  background: var(--text-primary) !important;
+  border: none !important;
+  color: white !important;
+  box-shadow: var(--shadow-md);
+}
+.button.is-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: var(--primary-color) !important;
+}
+
+.link-block a { margin: 8px 4px; }
+
+/* ── Hero sections ── */
+.hero.is-light {
+  background: var(--background-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+.hero-body { padding: 4rem 1.5rem; }
+.teaser .hero-body { padding-top: 2rem; padding-bottom: 4rem; }
+
+.publication-title {
+  font-weight: 800 !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 2rem !important;
+  line-height: 1.1 !important;
+}
+.publication-authors {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.publication-authors a {
+  color: var(--primary-color) !important;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.publication-authors a:hover { color: var(--primary-hover) !important; }
+.author-block { display: inline-block; margin-right: 0.5rem; }
+.eql-cntrb { font-size: 0.875rem; color: var(--text-light); font-style: italic; }
+
+/* ── Section titles ── */
+.title.is-3 {
+  font-weight: 700 !important;
+  color: var(--text-primary);
+  margin-bottom: 2rem !important;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.title.is-3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, var(--blue), var(--pink));
+  border-radius: 2px;
+}
+.section .title.is-3.has-text-left::after { left: 0; transform: none; }
+
+/* ── Abstract ── */
+.content.has-text-justified {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+/* ── Fade-in animation sections ── */
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Stagger cards ── */
+.stagger-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.stagger-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Metric cards (paper style) ── */
+.metric-card {
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem 1.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  border-radius: 4px;
+}
+.metric-card.blue-accent::before { background: var(--blue); }
+.metric-card.gold-accent::before { background: var(--gold); }
+.metric-card.green-accent::before { background: var(--green); }
+.metric-card.red-accent::before { background: var(--red); }
+.metric-card.pink-accent::before { background: var(--pink); }
+
+.metric-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.metric-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.metric-card .math-inline {
+  font-family: 'SF Mono', 'Cascadia Code', monospace;
+  font-size: 0.9em;
+  color: var(--gold);
+  background: rgba(212, 160, 23, 0.08);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ── Diagram containers ── */
+.diagram-container {
+  background: linear-gradient(145deg, #f8fafc, #f1f5f9);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.diagram-container svg { width: 100%; height: auto; }
+
+/* SVG trajectory animations */
+.traj-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 2s ease;
+}
+.fade-section.is-visible .traj-line,
+.anim-trigger.animate .traj-line {
+  stroke-dashoffset: 0;
+}
+
+.dot-pulse { animation: none; }
+.fade-section.is-visible .dot-pulse,
+.anim-trigger.animate .dot-pulse {
+  animation: pulse 1.5s ease infinite;
+}
+@keyframes pulse {
+  0%, 100% { r: 5; opacity: 0.6; }
+  50% { r: 9; opacity: 1; }
+}
+
+/* SVG animated bars */
+.bar-fill {
+  transition: width 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.fade-section:not(.is-visible) .bar-fill { width: 0 !important; }
+
+/* ── Dataset badges ── */
+.dataset-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid;
+  transition: var(--transition);
+}
+.dataset-badge:hover { transform: translateY(-2px); }
+.dataset-badge.blue {
+  color: var(--blue);
+  border-color: rgba(37,99,235,0.2);
+  background: rgba(37,99,235,0.05);
+}
+.dataset-badge.gold {
+  color: var(--gold);
+  border-color: rgba(212,160,23,0.2);
+  background: rgba(212,160,23,0.05);
+}
+.dataset-badge.green {
+  color: var(--green);
+  border-color: rgba(22,163,74,0.2);
+  background: rgba(22,163,74,0.05);
+}
+.dataset-badge.pink {
+  color: var(--pink);
+  border-color: rgba(147,51,234,0.2);
+  background: rgba(147,51,234,0.05);
+}
+
+/* ── Key Finding callout ── */
+.callout-box {
+  background: linear-gradient(135deg, rgba(212,160,23,0.04), rgba(37,99,235,0.04));
+  border: 1px solid rgba(212,160,23,0.2);
+  border-radius: var(--border-radius);
+  padding: 1.2rem 1.5rem;
+  margin-top: 1.5rem;
+}
+.callout-box p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+/* ── Counter numbers ── */
+.counter-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+/* ── Results comparison grid ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+@media (max-width: 768px) {
+  .comparison-grid { grid-template-columns: 1fr; }
+}
+
+.comparison-card {
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  border: 1px solid;
+  transition: var(--transition);
+}
+.comparison-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+.comparison-card.healthy {
+  border-color: rgba(22,163,74,0.2);
+  background: rgba(22,163,74,0.03);
+}
+.comparison-card.patient {
+  border-color: rgba(220,38,38,0.2);
+  background: rgba(220,38,38,0.03);
+}
+
+/* ── Takeaway boxes ── */
+.takeaway-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+@media (max-width: 768px) {
+  .takeaway-grid { grid-template-columns: 1fr; }
+}
+
+.takeaway-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+.takeaway-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.takeaway-icon {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  border: 2px solid;
+}
+
+/* ── BibTeX ── */
+.bibtex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.copy-bibtex-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.copy-bibtex-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.copy-bibtex-btn.copied { background: #10b981; }
+
+pre {
+  background: var(--background-accent) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 1.5rem !important;
+  font-size: 0.85rem !important;
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+}
+code {
+  background: var(--background-accent) !important;
+  color: var(--text-primary) !important;
+  font-family: 'SF Mono', 'Cascadia Code', 'Roboto Mono', monospace !important;
+}
+
+/* ── Scroll to top ── */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  width: 48px; height: 48px;
+  background: var(--primary-color);
+  color: white;
+  border: none; border-radius: 50%;
+  cursor: pointer;
+  opacity: 0; visibility: hidden;
+  transition: var(--transition);
+  z-index: 999;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-lg);
+}
+.scroll-to-top:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+}
+.scroll-to-top.visible { opacity: 1; visibility: visible; }
+
+/* ── Footer ── */
+.footer {
+  background: var(--background-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 1.5rem;
+}
+.footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.footer a:hover { color: var(--primary-hover); }
+
+/* ── Poster section ── */
+.poster-container {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-color);
+}
+
+/* ── SVG diagram text ── */
+svg text { font-family: 'Inter', sans-serif; }
+
+/* ── Responsive ── */
+@media screen and (max-width: 768px) {
+  .hero-dark .publication-title { font-size: 2rem !important; }
+  .hero-body { padding: 2rem 1rem; }
+  .hero-dark .hero-body { padding: 3rem 1rem; }
+  .hero-dark { min-height: 70vh; }
+  .comparison-grid { grid-template-columns: 1fr; }
+  .takeaway-grid { grid-template-columns: 1fr; }
+  .diagram-container { padding: 1rem; }
+}
+
+/* ── Print ── */
+@media print {
+  .scroll-to-top { display: none; }
+  .hero, .section { animation: none; }
+}
