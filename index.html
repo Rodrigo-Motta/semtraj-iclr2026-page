@@ -17,13 +17,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/index.css">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="static/css/fontawesome.all.min.css"></noscript>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/index.js"></script>
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script defer src="./static/js/index.js"></script>
 </head>
-<body class="light">
+<body>
 
 <!-- Theme toggle + scroll-to-top -->
 
@@ -35,7 +34,7 @@
 <section class="hero-section grid-bg">
   <canvas id="hero-canvas"></canvas>
   <div class="hero-content">
-    <img src="static/images/logo-iclr.png" alt="ICLR" style="height: 60px; margin-bottom: 16px; border-radius: 8px;">
+    <img src="./static/images/logo-iclr.png" alt="ICLR" style="height: 60px; margin-bottom: 16px; border-radius: 8px;">
     <div class="venue-badge">ICLR 2026</div>
     <h1>
       Characterizing Human <span class="blue">Semantic Navigation</span>
@@ -49,11 +48,11 @@
     <p class="equal-line">All authors contributed equally</p>
     <div style="display:flex; align-items:center; justify-content:center; gap:1.5rem; margin-top:1.2rem; flex-wrap:wrap;">
       <div style="display:flex; align-items:center; gap:0.6rem;">
-        <img src="static/images/logo-ufabc.png" alt="UFABC" style="height:36px;">
+        <img src="./static/images/logo-ufabc.png" alt="UFABC" style="height:36px;">
         <span class="dim" style="font-size:0.85rem; text-align:left; line-height:1.3;"><sup class="gold">1</sup> Federal University of ABC<br><span style="opacity:0.6; font-size:0.78rem;">Center of Mathematics, Computing &amp; Cognition</span></span>
       </div>
       <div style="display:flex; align-items:center; gap:0.6rem;">
-        <img src="static/images/logo-udem.png" alt="UdeM" style="height:36px;">
+        <img src="./static/images/logo-udem.png" alt="UdeM" style="height:36px;">
         <span class="dim" style="font-size:0.85rem; text-align:left; line-height:1.3;"><sup class="gold">2</sup> Université de Montréal<br><span style="opacity:0.6; font-size:0.78rem;">Dept. of CS &amp; Operations Research</span></span>
       </div>
     </div>
@@ -78,7 +77,7 @@
     <div class="row">
       <div class="col-7">
         <div class="diagram">
-          <img src="static/images/slide2-clusters.svg" alt="Clustering and switching between semantic categories">
+          <img src="./static/images/slide2-clusters.svg" alt="Clustering and switching between semantic categories">
         </div>
       </div>
       <div class="col-5">
@@ -112,7 +111,7 @@
     <div class="row">
       <div class="col-7">
         <div class="diagram">
-          <img src="static/images/slide3-cumulative.svg" alt="Cumulative embeddings capture search history">
+          <img src="./static/images/slide3-cumulative.svg" alt="Cumulative embeddings capture search history">
         </div>
       </div>
       <div class="col-5">
@@ -154,7 +153,7 @@
     <div class="row">
       <div class="col-7">
         <div class="diagram">
-          <img src="static/images/slide5-metrics.svg" alt="Five physics-inspired trajectory metrics">
+          <img src="./static/images/slide5-metrics.svg" alt="Five physics-inspired trajectory metrics">
         </div>
       </div>
       <div class="col-5 stagger-container">
@@ -260,7 +259,7 @@
     <div class="row">
       <div class="col-7">
         <div class="diagram">
-          <img src="static/images/slide7-neurodegenerative.svg" alt="Healthy vs neurodegenerative trajectory comparison">
+          <img src="./static/images/slide7-neurodegenerative.svg" alt="Healthy vs neurodegenerative trajectory comparison">
         </div>
       </div>
       <div class="col-5 stagger-container">
@@ -297,7 +296,7 @@
     <div class="row">
       <div class="col-7">
         <div class="diagram">
-          <img src="static/images/slide8-swear-category.svg" alt="Animals vs swear words semantic structure">
+          <img src="./static/images/slide8-swear-category.svg" alt="Animals vs swear words semantic structure">
         </div>
       </div>
       <div class="col-5 stagger-container">
@@ -313,7 +312,7 @@
           <h4 class="blue">🇮🇹 IT · 🇩🇪 GE — Cross-linguistic</h4>
           <p>Italian and German datasets reveal <span class="blue">language-specific</span> category discrimination. Same protocol, but different category effects — cultural and linguistic structure shapes how meaning is organized.</p>
           <div style="margin-top: 12px;">
-            <img src="static/images/slide8b-cross-linguistic.svg" alt="Cross-linguistic category structure" style="width:100%; border-radius:10px;">
+            <img src="./static/images/slide8b-cross-linguistic.svg" alt="Cross-linguistic category structure" style="width:100%; border-radius:10px;">
           </div>
         </div>
       </div>
@@ -332,7 +331,7 @@
     <div class="row">
       <div class="col-7">
         <div class="diagram">
-          <img src="static/images/slide9-model-robustness.svg" alt="Inter-model agreement per metric">
+          <img src="./static/images/slide9-model-robustness.svg" alt="Inter-model agreement per metric">
         </div>
       </div>
       <div class="col-5 stagger-container">
@@ -367,7 +366,7 @@
       <span class="gold">Cumulative</span> vs. <span class="red">non-cumulative</span>: trajectory length matters
     </h2>
     <div class="diagram" style="margin-bottom: 1.5rem;">
-      <img src="static/images/slide4-cumul-vs-noncumul.svg" alt="Cumulative vs non-cumulative trajectory comparison">
+      <img src="./static/images/slide4-cumul-vs-noncumul.svg" alt="Cumulative vs non-cumulative trajectory comparison">
     </div>
     <div class="comparison-grid stagger-container">
       <div class="metric-card blue-b stagger-card">
